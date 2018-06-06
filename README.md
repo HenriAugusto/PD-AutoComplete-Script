@@ -1,5 +1,5 @@
 # PD AutoComplete
-Autocomplete script made for Pure Data. (using Auto Hotkey)
+Autocomplete script made for Pure Data. It uses ![Auto Hotkey](https://autohotkey.com/) so right now it's a windows only solution. I'm studying a Java version or even vanilla version as soon as i can grasp the complexity of pd's source.
 
 ![gif demo](https://github.com/HenriAugusto/PD-AutoComplete/blob/master/demo%20images/PD%20AutoCOmplete%20demo.gif)
 
