@@ -2,12 +2,28 @@
 ;^   Control
 ;+   Shift
 
+global currentActiveWindow :=
+
 ;#IfWinActive, ahk_exe wish85.exe
-#If ( WinActive( "ahk_exe wish85.exe") && !listeningToHotkeys )
+#If ( ( WinActive( "ahk_exe wish85.exe") || WinActive( "ahk_exe nw.exe")) && !listeningToHotkeys )
 ;#If
 {
     '::      ;old apostrophe
     ;^Space::
+        currentActiveWindow :=
+        ;if a pd window is active
+        if ( WinActive( "ahk_exe wish85.exe") ) {
+            currentActiveWindow := "wish85.exe"
+        ;if a nw.exe window is active
+        } else if ( WinActive( "ahk_exe nw.exe")) {
+            ;if exists a purr-data window
+            if (WinExist("purr-data") ){
+                currentActiveWindow := "nw.exe" ;it is very likely that this nw.exe is purr-data
+            } else {
+                ;there is another window with ahk_exe nw.exe that is not purr-data
+                return
+            }
+        }
         receiveApostrophe()
     return
 }
@@ -33,7 +49,7 @@ return
 return
 
 
-#If, ((WinActive("ahk_exe wish85.exe")) and ((listeningToHotkeys)))
+#If, ((WinActive("ahk_exe wish85.exe") || (WinActive("ahk_exe nw.exe"))) and ((listeningToHotkeys)))
 {
     ;While we are active listen for what the user is typing so we can search the abstractions
     a::
@@ -148,7 +164,8 @@ return
 
 } ;end if win active <==LOOK HERE
 
-#IfWinActive, ahk_exe wish85.exe
+;#IfWinActive, ahk_exe wish85.exe
+#If, ((WinActive("ahk_exe wish85.exe") || (WinActive("ahk_exe nw.exe"))) and ((listeningToHotkeys)))
 {
 
     ~Up::

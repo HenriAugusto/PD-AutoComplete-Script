@@ -32,7 +32,8 @@ ShowListeningForHotkey(Hotkey)
     GuiControl, ListeningWindow: , HotkeyText, %Hotkey%
  
     ;WinActivate, ahk_exe wish85.exe
-    WinGetPos, ActWin_X, ActWin_Y, ActWin_W, ActWin_H, ahk_exe wish85.exe
+    ;TrayTip, ehueh, currentActiveWindow = %currentActiveWindow%, 1000
+    WinGetPos, ActWin_X, ActWin_Y, ActWin_W, ActWin_H, ahk_exe %currentActiveWindow%
     if !ActWin_W
         Return "Error"
  
