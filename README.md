@@ -1,15 +1,15 @@
 # PD AutoComplete
 
-**If you're using Vanilla you should use ![PD AutoComplete Plugin](https://github.com/HenriAugusto/PD-AutoComplete-Plugin).**
+**DISCONTINUED: If you're using Vanilla you should use [PD AutoComplete Plugin](https://github.com/HenriAugusto/PD-AutoComplete-Plugin).**
 
-This is an autocomplete script made for Pure Data. It uses ![Auto Hotkey](https://autohotkey.com/) so right now it's a windows only solution. Since there is a vanilla plugin it's main goal right now is to be used with Purr Data.
+This is an autocomplete script made for Pure Data. It uses [Auto Hotkey](https://autohotkey.com/) so right now it's a windows only solution. Since now there is a native (TLC) plugin for PD vanilla i'm keeping this repo online only because it might be useful for people using Purr Data.
 
 
 ![gif demo](https://github.com/HenriAugusto/PD-AutoComplete/blob/master/demo%20images/PD%20AutoCOmplete%20demo.gif)
 
 ## Download
 
-See the ![releases page](https://github.com/HenriAugusto/PD-AutoComplete/releases)
+See the [releases page](https://github.com/HenriAugusto/PD-AutoComplete/releases)
 
 ## PD AutoComplete - Help
 
